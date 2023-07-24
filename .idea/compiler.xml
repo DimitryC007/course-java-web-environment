@@ -9,5 +9,9 @@
         <module name="client" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="network" target="17" />
+      <module name="server" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
