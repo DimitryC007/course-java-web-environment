@@ -6,6 +6,7 @@ import application.models.Command;
 import java.io.DataInputStream;
 import java.io.PrintStream;
 import java.net.Socket;
+import com.google.gson.Gson;
 
 public class SocketClient {
     private static Socket socket = null;
@@ -34,8 +35,9 @@ public class SocketClient {
     }
 
     public static void SendMessage(Command command) {
-        var base64String = Base64Helper.objectToBase64(command.getData());
-        toNetOutputStream.println(command.getName() + "_" + base64String);
+        var gson = new Gson();
+        var json = gson.toJson(command.getData());
+        toNetOutputStream.println(command.getName() + "_" + json);
     }
 }
 

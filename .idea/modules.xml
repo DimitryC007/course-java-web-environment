@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/src/server/server.iml" filepath="$PROJECT_DIR$/src/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/storeManagementSystem.iml" filepath="$PROJECT_DIR$/storeManagementSystem.iml" />
     </modules>
   </component>

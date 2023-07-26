@@ -1,0 +1,8 @@
+application\models\UserAuthenticationCommand.class
+application\models\UserAuthenticationModel.class
+module-info.class
+application\helpers\Base64Helper.class
+application\network\SocketClient.class
+application\client\StoreManagementApplicationController.class
+application\models\Command.class
+application\client\StoreManagementApplication.class
