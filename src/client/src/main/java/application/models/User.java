@@ -4,9 +4,9 @@ public class User {
     private String fullName;
     private String id;
     private String phone;
-    private String accountNumber;
-    private Integer branchId;
-    private Integer employeeId;
+    private String accountId;
+    private int branchId;
+    private int employeeId;
     private String role;
     private String username;
     private String password;
@@ -14,67 +14,59 @@ public class User {
     public User(String fullName,
                 String id,
                 String phone,
-                String accountNumber,
+                String accountId,
                 Integer branchId,
                 Integer employeeId,
-                String role,
                 String username,
-                String password) {
+                String password,
+                String role) {
+
         this.fullName = fullName;
+        this.id = id;
+        this.phone = phone;
+        this.accountId = accountId;
+        this.branchId = branchId;
+        this.employeeId = employeeId;
         this.role = role;
         this.username = username;
         this.password = password;
     }
 
 
-    public String getFullName()
-    {
+    public String getFullName() {
         return this.fullName;
     }
 
-    public String getId()
-    {
+    public String getId() {
         return this.id;
     }
 
-    public String getPhone()
-    {
+    public String getPhone() {
         return this.phone;
     }
 
-    public String getAccountNumber()
-    {
-        return this.accountNumber;
+    public String getAccountId() {
+        return this.accountId;
     }
 
-    public Integer getBranchId()
-    {
+    public int getBranchId() {
         return this.branchId;
     }
 
-    public Integer getEmployeeId()
-    {
+    public int getEmployeeId() {
         return this.employeeId;
     }
 
-    public String getRole()
-    {
+    public String getRole() {
         return this.role;
     }
 
-    public String getUsername()
-    {
+    public String getUsername() {
         return this.username;
     }
 
-    public String getPassword()
-    {
+    public String getPassword() {
         return this.password;
     }
 
-
-    @Override
-    public String toString() {
-        return String.format("%s %s %s %s", fullName, role, username, password);
-    }
 }

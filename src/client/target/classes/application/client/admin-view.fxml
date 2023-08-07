@@ -13,7 +13,7 @@
       <Label layoutX="20.0" layoutY="89.0" text="Phone:" />
       <TextField fx:id="phoneField" layoutX="78.0" layoutY="85.0" />
       <Label layoutX="15.0" layoutY="128.0" text="Account:" />
-      <TextField fx:id="accountNumberField" layoutX="79.0" layoutY="124.0" />
+      <TextField fx:id="accountIdField" layoutX="79.0" layoutY="124.0" />
       <Label layoutX="13.0" layoutY="167.0" text="BranchId:" />
       <TextField fx:id="branchIdField" layoutX="80.0" layoutY="163.0" />
       <TextField fx:id="usernameField" layoutX="81.0" layoutY="206.0" />

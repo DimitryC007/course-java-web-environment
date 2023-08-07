@@ -19,7 +19,7 @@ public class AdminViewController implements IResponseListener {
     @FXML
     private TextField phoneField;
     @FXML
-    private TextField accountNumberField;
+    private TextField accountIdField;
     @FXML
     private TextField branchIdField;
     @FXML
@@ -67,9 +67,9 @@ public class AdminViewController implements IResponseListener {
                 fullNameField.getText(),
                 idField.getText(),
                 phoneField.getText(),
-                accountNumberField.getText(),
+                accountIdField.getText(),
                 Integer.parseInt(branchIdField.getText()),
-                0,
+                getEmployeeId(),
                 usernameField.getText(),
                 passwordField.getText(),
                 getRole());
@@ -79,13 +79,26 @@ public class AdminViewController implements IResponseListener {
         SocketClient.sendMessage(new AddUserCommand(userToAdd), null);
     }
 
+    private int getEmployeeId()
+    {
+        var users = usersList.getItems();
+        int maxId = -1;
+        for (var user:users)
+        {
+            if(user.getEmployeeId() > maxId)
+            {
+                maxId = user.getEmployeeId();
+            }
+        }
+        return maxId + 1;
+    }
 
     private boolean isValidUser()
     {
         return !isNullOrEmpty(fullNameField.getText())
                 && !isNullOrEmpty(idField.getText())
                 && !isNullOrEmpty(phoneField.getText())
-                && !isNullOrEmpty(accountNumberField.getText())
+                && !isNullOrEmpty(accountIdField.getText())
                 && !isNullOrEmpty(branchIdField.getText())
                 && !isNullOrEmpty(usernameField.getText())
                 && !isNullOrEmpty(passwordField.getText())
@@ -96,7 +109,7 @@ public class AdminViewController implements IResponseListener {
         fullNameField.clear();
         idField.clear();
         phoneField.clear();
-        accountNumberField.clear();
+        accountIdField.clear();
         branchIdField.clear();
         usernameField.clear();
         passwordField.clear();
@@ -149,7 +162,7 @@ public class AdminViewController implements IResponseListener {
                 stringBuilder.append("FullName: " + user.getFullName());
                 stringBuilder.append("\nId: " + user.getId());
                 stringBuilder.append("\nPhone: " + user.getPhone());
-                stringBuilder.append("\nAccount: " + user.getAccountNumber());
+                stringBuilder.append("\nAccount: " + user.getAccountId());
                 stringBuilder.append("\nBranchId: " + user.getBranchId());
                 stringBuilder.append("\nEmployeeId: " + user.getEmployeeId());
                 stringBuilder.append("\nRole: " + user.getRole());
