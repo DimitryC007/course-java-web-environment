@@ -1,6 +1,6 @@
 package application.network;
 
-import application.events.ResponseListener;
+import application.events.IResponseListener;
 import application.models.Command;
 
 import java.io.DataInputStream;
@@ -15,7 +15,7 @@ public class SocketClient {
     private static Socket socket = null;
     private static DataInputStream fromNetInputStream;
     private static PrintStream toNetOutputStream;
-    private static Map<UUID, ResponseListener> responseListeners = new HashMap<>();
+    private static Map<UUID, IResponseListener> responseListeners = new HashMap<>();
 
     public static void connect(int port) {
         try {
@@ -41,7 +41,7 @@ public class SocketClient {
         }
     }
 
-    public static void sendMessage(Command command, ResponseListener responseListener) {
+    public static void sendMessage(Command command, IResponseListener responseListener) {
         try {
             UUID requestId = UUID.randomUUID();
 
@@ -64,7 +64,7 @@ public class SocketClient {
                 UUID requestId = UUID.fromString(parts[0]);
                 String responseData = parts[1];
 
-                ResponseListener responseListener = responseListeners.get(requestId);
+                IResponseListener responseListener = responseListeners.get(requestId);
 
                 if (responseListener != null) {
                     responseListener.onResponseReceived(responseData);

@@ -1,8 +1,8 @@
 package application.models;
 
 public class UserAuthenticationCommand extends Command<UserAuthenticationModel> {
-    public UserAuthenticationCommand(String username, String password) {
+    public UserAuthenticationCommand(UserAuthenticationModel userAuthentication) {
         this.name = this.getClass().getSimpleName();
-        this.data = new UserAuthenticationModel(username, password);
+        this.data = userAuthentication;
     }
 }

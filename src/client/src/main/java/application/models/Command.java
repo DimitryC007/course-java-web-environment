@@ -1,7 +1,5 @@
 package application.models;
 
-import java.io.Serializable;
-
 public abstract class Command<TObject> {
     protected String name;
     protected TObject data;

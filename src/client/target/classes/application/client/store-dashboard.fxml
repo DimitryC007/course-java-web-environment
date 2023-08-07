@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.21442885771543083" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.client.StoreDashboardController">
+<SplitPane dividerPositions="0.298426267728774" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="751.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.client.StoreDashboardController">
   <items>
-    <AnchorPane maxWidth="200.0" minHeight="0.0" minWidth="200.0" prefHeight="498.0" prefWidth="168.0" SplitPane.resizableWithParent="false">
+    <AnchorPane maxWidth="304.0" minHeight="0.0" minWidth="200.0" prefHeight="513.0" prefWidth="304.0" SplitPane.resizableWithParent="false">
          <children>
             <Button id="AdminButton" layoutX="32.0" layoutY="28.0" mnemonicParsing="false" onAction="#onAdminButtonClick" prefHeight="26.0" prefWidth="116.0" text="Admin" />
             <Button layoutX="32.0" layoutY="93.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Button" />
