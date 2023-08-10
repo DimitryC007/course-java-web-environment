@@ -36,10 +36,15 @@ public class AdminViewController implements IResponseListener {
     @FXML
     private ListView<User> usersList;
     private Gson gson;
+    private User user;
 
     public void setUsersList() {
         gson = new Gson();
         SocketClient.sendMessage(new GetAllUsersCommand(), this);
+    }
+
+    public void setLoggedInUser(User user) {
+        this.user = user;
     }
 
     @Override

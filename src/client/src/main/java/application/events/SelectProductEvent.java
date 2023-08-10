@@ -4,13 +4,13 @@ import application.models.Product;
 import javafx.event.Event;
 import javafx.event.EventType;
 
-public class ProductPurchaseEvent extends Event {
+public class SelectProductEvent extends Event {
     private final Product product;
 
-    public static final EventType<ProductPurchaseEvent> PURCHASE_EVENT = new EventType<>(Event.ANY, "PRODUCT_PURCHASE_EVENT");
+    public static final EventType<SelectProductEvent> SELECT_PRODUCT = new EventType<>(Event.ANY, "SELECT_PRODUCT_EVENT");
 
-    public ProductPurchaseEvent(Product product) {
-        super(PURCHASE_EVENT);
+    public SelectProductEvent(Product product) {
+        super(SELECT_PRODUCT);
         this.product = product;
     }
 

@@ -5,7 +5,7 @@
 
 <AnchorPane prefHeight="503.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.client.AdminViewController">
    <children>
-      <ListView fx:id="usersList" layoutX="236.0" layoutY="32.0" prefHeight="400.0" prefWidth="364.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ListView fx:id="usersList" layoutX="236.0" layoutY="32.0" prefHeight="400.0" prefWidth="722.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Label layoutX="19.0" layoutY="18.0" text="Full name:" />
       <TextField fx:id="fullNameField" layoutX="77.0" layoutY="14.0" />
       <Label layoutX="20.0" layoutY="54.0" text="Id:" />

@@ -3,9 +3,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.client.ProductManagementViewController">
+<AnchorPane prefHeight="510.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.client.ProductManagementViewController">
    <children>
-      <ListView fx:id="productsList" layoutX="207.0" prefHeight="401.0" prefWidth="391.0" />
+      <ListView fx:id="productsList" prefHeight="510.0" prefWidth="260.0" />
+      <ListView fx:id="customersList" layoutX="420.0" prefHeight="510.0" prefWidth="282.0" />
+      <Label layoutX="289.0" layoutY="24.0" text="Select Customer:" />
+      <Label fx:id="idLabel" layoutX="289.0" layoutY="49.0" prefHeight="18.0" prefWidth="110.0" text="id" />
+      <Label layoutX="287.0" layoutY="246.0" text="Selected Product:" />
+      <Label fx:id="productIdLabel" layoutX="287.0" layoutY="275.0" prefHeight="18.0" prefWidth="110.0" text="productId" />
+      <Label fx:id="categoryLabel" layoutX="287.0" layoutY="303.0" prefHeight="18.0" prefWidth="110.0" text="category" />
+      <Label fx:id="productNameLabel" layoutX="287.0" layoutY="330.0" prefHeight="18.0" prefWidth="110.0" text="productName" />
+      <Label fx:id="priceLabel" layoutX="287.0" layoutY="359.0" prefHeight="18.0" prefWidth="110.0" text="price" />
+      <Label fx:id="fullNameLabel" layoutX="289.0" layoutY="81.0" text="fullName" />
+      <Label fx:id="phoneLabel" layoutX="289.0" layoutY="112.0" text="phone" />
+      <Label fx:id="customerTypeLabel" layoutX="287.0" layoutY="145.0" text="customerType" />
+      <Label fx:id="discountLabel" layoutX="290.0" layoutY="180.0" text="discount" />
+      <Button fx:id="purchaseButton" disable="true" layoutX="278.0" layoutY="439.0" mnemonicParsing="false" onAction="#onPurchaseClick" prefHeight="26.0" prefWidth="121.0" text="Purchase" />
+      <Label fx:id="purchaseLabel" layoutX="284.0" layoutY="479.0" prefHeight="18.0" prefWidth="110.0" />
    </children>
 </AnchorPane>

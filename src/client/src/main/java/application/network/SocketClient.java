@@ -9,6 +9,7 @@ import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+
 import com.google.gson.Gson;
 
 public class SocketClient {
@@ -70,6 +71,7 @@ public class SocketClient {
                     responseListener.onResponseReceived(responseData);
                     responseListeners.remove(requestId);
                 }
+
             }
         } catch (Exception ex) {
             ex.printStackTrace();

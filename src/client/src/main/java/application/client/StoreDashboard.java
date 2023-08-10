@@ -1,5 +1,6 @@
 package application.client;
 
+import application.models.User;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -20,13 +21,15 @@ public class StoreDashboard {
         this.productsManagementView = productsManagementView;
     }
 
-    public void start() throws IOException {
+    public void start(User user) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StoreManagementApplication.class.getResource("store-dashboard.fxml"));
         Parent content = fxmlLoader.load();
         StoreDashboardController controller = fxmlLoader.getController();
-
+        controller.setLoggedInUser(user);
         controller.setAdminView(this.adminView);
         controller.setProductsManagementView(this.productsManagementView);
+
+
 
         Scene scene = new Scene(content, 1000, 800);
         this.stage.setScene(scene);

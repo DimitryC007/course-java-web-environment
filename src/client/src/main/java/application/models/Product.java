@@ -5,6 +5,7 @@ public class Product {
     private int branchId;
     private String category;
     private String productName;
+    private double price;
 
     public int getProductId() {
         return productId;
@@ -36,5 +37,10 @@ public class Product {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public double getPrice()
+    {
+        return this.price;
     }
 }

@@ -1,5 +1,6 @@
 package application.client;
 
+import application.models.User;
 import application.models.View;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -11,6 +12,8 @@ import java.io.IOException;
 public class StoreDashboardController {
     AdminView adminView;
     ProductsManagementView productsManagementView;
+    User user;
+
     @FXML
     private AnchorPane mainContent;
     @FXML
@@ -21,10 +24,18 @@ public class StoreDashboardController {
 
     public void setAdminView(AdminView adminView) {
         this.adminView = adminView;
+        if(!this.user.getRole().equals("admin"))
+        {
+            this.adminButton.setDisable(true);
+        }
     }
 
     public void setProductsManagementView(ProductsManagementView productsManagementView) {
         this.productsManagementView = productsManagementView;
+    }
+
+    public void setLoggedInUser(User user) {
+        this.user = user;
     }
 
     @FXML
@@ -39,7 +50,7 @@ public class StoreDashboardController {
 
     private void showContent(View view) {
         try {
-            Parent content = view.getContent();
+            Parent content = view.getContent(this.user);
 
             // Replace the existing content with the new scene
             mainContent.getChildren().clear();
