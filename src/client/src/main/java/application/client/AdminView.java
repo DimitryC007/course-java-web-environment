@@ -15,8 +15,5 @@ public class AdminView implements View {
         controller.setUsersList();
 
         return parent;
-        //Scene scene = new Scene(fxmlLoader.load(), 1000, 800);
-        //this.stage.setScene(scene);
-        //this.stage.show();
     }
 }

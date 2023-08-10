@@ -2,7 +2,6 @@ package application.client;
 
 import application.models.View;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
@@ -11,20 +10,31 @@ import java.io.IOException;
 
 public class StoreDashboardController {
     AdminView adminView;
+    ProductsManagementView productsManagementView;
     @FXML
     private AnchorPane mainContent;
     @FXML
     private Button adminButton;
 
-    public void setAdminView(AdminView adminView)
-    {
+    @FXML
+    private Button productsManagementButton;
+
+    public void setAdminView(AdminView adminView) {
         this.adminView = adminView;
     }
 
+    public void setProductsManagementView(ProductsManagementView productsManagementView) {
+        this.productsManagementView = productsManagementView;
+    }
+
     @FXML
-    protected void onAdminButtonClick()
-    {
+    protected void onAdminButtonClick() {
         showContent(this.adminView);
+    }
+
+    @FXML
+    protected void onProductsManagementButtonClick() {
+        showContent(this.productsManagementView);
     }
 
     private void showContent(View view) {

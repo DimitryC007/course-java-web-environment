@@ -1,6 +1,6 @@
 package application.client;
 
-import application.events.IResponseListener;
+import application.interfaces.IResponseListener;
 import application.models.UserAuthenticationCommand;
 import application.models.UserAuthenticationModel;
 import application.network.SocketClient;

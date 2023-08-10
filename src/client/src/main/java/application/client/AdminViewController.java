@@ -1,6 +1,6 @@
 package application.client;
 
-import application.events.IResponseListener;
+import application.interfaces.IResponseListener;
 import application.models.*;
 import application.network.SocketClient;
 import com.google.gson.Gson;

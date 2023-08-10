@@ -7,8 +7,8 @@
   <items>
     <AnchorPane maxWidth="304.0" minHeight="0.0" minWidth="200.0" prefHeight="513.0" prefWidth="304.0" SplitPane.resizableWithParent="false">
          <children>
-            <Button id="AdminButton" layoutX="32.0" layoutY="28.0" mnemonicParsing="false" onAction="#onAdminButtonClick" prefHeight="26.0" prefWidth="116.0" text="Admin" />
-            <Button layoutX="32.0" layoutY="93.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="116.0" text="Button" />
+            <Button id="AdminButton" layoutX="32.0" layoutY="28.0" mnemonicParsing="false" onAction="#onAdminButtonClick" prefHeight="26.0" prefWidth="148.0" text="Admin" />
+            <Button fx:id="productsManagementButton" layoutX="32.0" layoutY="93.0" mnemonicParsing="false" onAction="#onProductsManagementButtonClick" prefHeight="26.0" prefWidth="148.0" text="Products Management" />
          </children></AnchorPane>
     <AnchorPane fx:id="mainContent" maxWidth="600.0" minHeight="0.0" minWidth="600.0" prefHeight="398.0" prefWidth="475.0" SplitPane.resizableWithParent="false" />
   </items>

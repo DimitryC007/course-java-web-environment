@@ -5,7 +5,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,8 +17,9 @@ public class StoreManagementApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        var productsManagementView = new ProductsManagementView();
         var adminView = new AdminView();
-        var dashboardStore = new StoreDashboard(stage, adminView);
+        var dashboardStore = new StoreDashboard(stage, adminView, productsManagementView);
 
 
         FXMLLoader fxmlLoader = new FXMLLoader(StoreManagementApplication.class.getResource("app-start.fxml"));

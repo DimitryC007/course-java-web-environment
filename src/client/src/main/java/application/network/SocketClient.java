@@ -1,6 +1,6 @@
 package application.network;
 
-import application.events.IResponseListener;
+import application.interfaces.IResponseListener;
 import application.models.Command;
 
 import java.io.DataInputStream;
