@@ -22,4 +22,36 @@ public class PurchaseProductModel {
         this.sellerName = user.getFullName();
         this.sellerId = user.getEmployeeId();
     }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public String getCustomerFullName() {
+        return customerFullName;
+    }
+
+    public String getCustomerType() {
+        return customerType;
+    }
+
+    public double getPurchasePrice() {
+        return purchasePrice;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public int getProductId() {
+        return productId;
+    }
+
+    public String getSellerName() {
+        return sellerName;
+    }
+
+    public int getSellerId() {
+        return sellerId;
+    }
 }

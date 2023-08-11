@@ -41,7 +41,6 @@ public class StoreManagementApplicationController implements IResponseListener {
                 loginStatusLabel.setText("Login failed, Credentials are invalid");
                 return;
             }
-            loginStatusLabel.setText("Login success");
             try {
                 loginStatusLabel.setText("Login success");
                 TimeUnit.SECONDS.sleep(1);

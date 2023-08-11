@@ -25,6 +25,7 @@ public class StoreDashboard {
         FXMLLoader fxmlLoader = new FXMLLoader(StoreManagementApplication.class.getResource("store-dashboard.fxml"));
         Parent content = fxmlLoader.load();
         StoreDashboardController controller = fxmlLoader.getController();
+        controller.setStage(stage);
         controller.setLoggedInUser(user);
         controller.setAdminView(this.adminView);
         controller.setProductsManagementView(this.productsManagementView);
