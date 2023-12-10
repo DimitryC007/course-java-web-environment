@@ -1,0 +1,46 @@
+[
+  {
+    "fullName": "Admin Name",
+    "id": "0000",
+    "phone": "1234567890",
+    "accountId": "11111111",
+    "branchId": 0,
+    "employeeId": 0,
+    "role": "admin",
+    "username": "admin",
+    "password": "admin"
+  },
+  {
+    "fullName": "Shift Manager Name",
+    "id": "1111",
+    "phone": "9876543210",
+    "accountId": "22222222",
+    "branchId": 1,
+    "employeeId": 1,
+    "role": "shiftManager",
+    "username": "shiftManager",
+    "password": "password1"
+  },
+  {
+    "fullName": "Cashier Name",
+    "id": "2222",
+    "phone": "5678901234",
+    "accountId": "33333333",
+    "branchId": 2,
+    "employeeId": 2,
+    "role": "cashier",
+    "username": "cashier",
+    "password": "password2"
+  },
+  {
+    "fullName": "Seller Name",
+    "id": "3333",
+    "phone": "4321098765",
+    "accountId": "44444444",
+    "branchId": 3,
+    "employeeId": 3,
+    "role": "seller",
+    "username": "seller",
+    "password": "password3"
+  }
+]
